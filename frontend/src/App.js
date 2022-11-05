@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { AuthChecker, CookieChecker } from "@utils";
-import { Account } from "@pages";
+import { Account, Posts } from "@pages";
 
 function App() {
   return (
@@ -8,8 +8,8 @@ function App() {
       <Route path="/" element={<CookieChecker />}>
         <Route path="account/*" element={<Account />} />
         <Route element={<AuthChecker />}>
+          <Route path="post/*" element={<Posts />} />
           <Route path="main" element={<Account />} />
-          <Route path="post" element={<Account />} />
           <Route path="search" element={<Account />} />
           <Route path="profile" element={<Account />} />
         </Route>
