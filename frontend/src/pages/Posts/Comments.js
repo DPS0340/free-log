@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 
-function Comments() {
-  const { postId } = useParams();
+function Profile() {
+  const { userId } = useParams();
 
-  return <div>post Id : {postId}'s comments</div>;
+  return <div>user Id : {userId}'s Profile</div>;
 }
 
-export default Comments;
+export default Profile;
